@@ -30,7 +30,7 @@ public class ContactData {
         this.address = address;
     }
 
-    // Using Getters for get access from another  method
+    // Using Getters for get data access from another method
     public String getName() {
         return name;
     }   
@@ -47,6 +47,7 @@ public class ContactData {
         return address;
     }
    
+   // toString method 
     @Override
     public String toString() {
         return "ContactData{" +
