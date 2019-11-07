@@ -39,6 +39,8 @@ public class MyContactList {
                 case 5:
                     System.exit(0);
                     break;
+                default:
+                    System.out.println("Please try again");
             }
 
         } while (numberOfMenu != 5);
@@ -54,6 +56,7 @@ public class MyContactList {
         System.out.println(String.format("Please enter your choice:"));
     }
 
+    // For create new contact in the list
     private static ContactData createNewContact(Scanner scanner){
         scanner.nextLine();
         String name, phone, email, address;
@@ -88,7 +91,8 @@ public class MyContactList {
         return contact;
 
     }
-
+    
+    // SearchList for search the contact from the list
     private static void searchList(ContactList contactList, Scanner scanner){
         scanner.nextLine();
         System.out.println("Enter name to search: ");
@@ -105,7 +109,8 @@ public class MyContactList {
             System.out.println("Contact not found.");
         }
     }
-
+    
+    //showAllContacts Method to see all the contacts
     private static void showAllContacts(ArrayList<ContactData> contacts){
         System.out.println("All contacts.......");
 
@@ -122,8 +127,10 @@ public class MyContactList {
 
         System.out.println("................................");
     }
-
+    
+    //Delete method for deleting less important contact
     private static void deleteContact(ContactList contactList, Scanner scanner){
+        // For choosing delete item showAllContacts method is used inside the deleteContact method
         showAllContacts(contactList.getContacts());
         System.out.println("Enter index number: ");
         int index = scanner.nextInt();
