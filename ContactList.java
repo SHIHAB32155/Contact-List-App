@@ -6,11 +6,13 @@ public class ContactList {
 
   private ArrayList<ContactData> contacts;
 
-    public ContactList() {
+  //Constructor  
+  public ContactList() {
         this.contacts = new ArrayList<>();
     }
 
-    public void createContact(ContactData contact){
+  // Methods  for process contact list
+  public void createContact(ContactData contact){
         contacts.add(contact);
     }
 
@@ -22,7 +24,8 @@ public class ContactList {
         contacts.remove(index);
     }
 
-    public ContactData searchContact(String name){
+   
+  public ContactData searchContact(String name){
         for (ContactData data : contacts) {
             if (data.getName().equalsIgnoreCase(name)){
                 return data;
