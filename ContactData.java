@@ -47,7 +47,7 @@ public class ContactData {
         return address;
     }
    
-   // toString method 
+   //Override toString method 
     @Override
     public String toString() {
         return "ContactData{" +
